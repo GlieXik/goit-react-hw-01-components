@@ -1,4 +1,4 @@
-import {StatisticsTitle,Container, Stats,StatsItem,StatsLabel} from "./Statistics.styled"
+import {StatisticsTitle, Stats,StatsItem,StatsLabel} from "./Statistics.styled"
 
 import {Box} from './Box'
 
