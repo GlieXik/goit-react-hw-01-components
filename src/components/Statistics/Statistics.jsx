@@ -16,19 +16,6 @@ export const Statistics = ({statistics: props,title}) => {
           <span >{percentage}</span>
         </StatsItem>
     )}
-
-    {/* <StatsItem>
-      <StatsLabel>.mp3</StatsLabel>
-      <span >14%</span>
-    </StatsItem>
-    <StatsItem>
-      <StatsLabel>.pdf</StatsLabel>
-      <span >41%</span>
-    </StatsItem>
-    <StatsItem>
-      <StatsLabel>.mp4</StatsLabel>
-      <span >12%</span>
-    </StatsItem> */}
     </Stats>
     </Box>)
 }
