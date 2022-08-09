@@ -7,13 +7,14 @@ import friends from "../json/friends"
 import {FriendList} from "./FriendList/FriendList"
 import transactions from "../json/transactions"
 import {TransactionHistory} from "./TransactionHistory/TransactionHistory"
+import statistics from "../json/data"
 
 export const App = () => {
   return (
   <ThemeProvider theme={theme}>
       <Profile username={user.username} tag={user.tag} location= {user.location} avatar={user.avatar} stats={user.stats}></Profile>
-      <Statistics/>
-      <FriendList friends={friends} />
+      <Statistics statistics={statistics} title="Stats" />
+      <FriendList friends={friends} t/>
       <TransactionHistory items={transactions} />
   </ThemeProvider>
   );

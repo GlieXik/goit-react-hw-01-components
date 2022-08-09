@@ -4,16 +4,20 @@ import {Box} from './Box'
 
 
 
-export const Statistics = () => {
-  return (<Box m={4} width="350px" border="normal" borderRadius="lg">
-    <StatisticsTitle>Stats</StatisticsTitle>
-    <Stats>
+export const Statistics = ({statistics: props,title}) => {
 
-    <StatsItem>
-      <StatsLabel>.docx</StatsLabel>
-      <span >4%</span>
-    </StatsItem>
-    <StatsItem>
+  return (<Box m={4} width="450px" border="normal" borderRadius="lg">
+
+    {title && <StatisticsTitle>{title}</StatisticsTitle>}
+    <Stats>
+    {props.map(({id,label,percentage})=>
+        <StatsItem key={id}>
+          <StatsLabel>{label}</StatsLabel>
+          <span >{percentage}</span>
+        </StatsItem>
+    )}
+
+    {/* <StatsItem>
       <StatsLabel>.mp3</StatsLabel>
       <span >14%</span>
     </StatsItem>
@@ -24,7 +28,7 @@ export const Statistics = () => {
     <StatsItem>
       <StatsLabel>.mp4</StatsLabel>
       <span >12%</span>
-    </StatsItem>
+    </StatsItem> */}
     </Stats>
     </Box>)
 }
